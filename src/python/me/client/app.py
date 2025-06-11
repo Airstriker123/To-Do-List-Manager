@@ -30,3 +30,4 @@ if __name__ == "__main__":
     ToDOList()
     ToDOList.main()
 
+print('Hello world!')
