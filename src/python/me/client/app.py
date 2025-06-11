@@ -1,9 +1,8 @@
 #modules preinstalled up here
 import os
-import sys
-import time
+import logging
+
 try:
-    import logging
    # from backend.main import *
     from colorama import Fore, Back, Style
     #list modules here
@@ -15,7 +14,12 @@ except:
         "",
     ]
     #install custom py modules using pip
-    os.system(f"pip install {dependencies}")
+    for module in dependencies:
+        print(f"Installing module: {module}")
+        os.system(f"pip install {module}")
+        import module
+
+
     import logging
    # from backend.main import *
     from colorama import Fore, Back, Style
@@ -45,4 +49,4 @@ if __name__ == "__main__":
     ToDoList()
     ToDoList.main()
 
-logging.debug(f"{green}Hello world!")
+logging.debug("Hello world!")
