@@ -1,12 +1,11 @@
 #modules preinstalled up here
 import os
-import logging
-import time
 
 try:
    # from backend.main import *
     from colorama import Fore, Back, Style
     from ui.ui import UserInterface
+    from src.python.me.backend.commands import *
     import fade
     #list modules here
 except:
@@ -22,15 +21,6 @@ except:
         os.system(f"pip install {module}")
         import fade
     from colorama import Fore, Back, Style
-logging.basicConfig(level=logging.INFO)
-reset = Fore.RESET
-red = Fore.RED
-blue = Fore.BLUE
-lred = Fore.LIGHTRED_EX
-lblue = Fore.LIGHTBLUE_EX
-green = Fore.GREEN
-yellow = Fore.YELLOW
-orange = '\033[38;5;208m'
 
 class ToDoList:
     #class static variables here most likely will have them
@@ -62,7 +52,7 @@ class ToDoList:
              elif choice == "3":
                  pass
              elif choice == "4":
-                 pass
+                 Commands.option_4()
              else:
                  print(f'{red}"{choice}" is not in options!{reset}')
                  print(f"{red}[!] Invalid choice!{reset}")
@@ -78,4 +68,4 @@ class ToDoList:
 if __name__ == "__main__":
     ToDoList()
     ToDoList.main()
-input()
+
