@@ -2,9 +2,12 @@
 import os
 import logging
 
+
+
 try:
    # from backend.main import *
     from colorama import Fore, Back, Style
+    from ui.ui import UserInterface
     #list modules here
 except:
     #include their install command here e.g os.system('pip install <module>')
@@ -30,6 +33,7 @@ blue = Fore.BLUE
 lred = Fore.LIGHTRED_EX
 lblue = Fore.LIGHTBLUE_EX
 green = Fore.GREEN
+yellow = Fore.YELLOW
 
 class ToDoList:
     #class static variables here most likely will have them
@@ -41,12 +45,14 @@ class ToDoList:
 
     @staticmethod
     def main() -> None:
-        #public static void main ahh method -_-
-        pass
+        print(f"{green}{UserInterface().banner}\n{yellow}{UserInterface().task_menu}{reset}")
+
+
 
 #only exec if opened as script and not module (why would it be opened as a module idfk)
 if __name__ == "__main__":
     ToDoList()
     ToDoList.main()
 
-logging.debug("Hello world!")
+
+input()
