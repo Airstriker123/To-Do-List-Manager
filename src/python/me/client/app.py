@@ -1,21 +1,44 @@
 #modules preinstalled up here
 import os
-import sys
-import time
+import logging
+
+
+
 try:
+   # from backend.main import *
+    from colorama import Fore, Back, Style
+    from ui.ui import UserInterface
+    import fade
     #list modules here
-    import logging
 except:
     #include their install command here e.g os.system('pip install <module>')
     dependencies = [
         #list your module in string 🥷 -_-
-        "logging",
-        "",
+        "colorama>=0.4.6",
+        "fade",
     ]
-    os.system(f"pip install {dependencies}")
+    #install custom py modules using pip
+    for module in dependencies:
+        print(f"Installing module: {module}")
+        os.system(f"pip install {module}")
+        import module
 
-class ToDOList:
+
+    import logging
+   # from backend.main import *
+    from colorama import Fore, Back, Style
+logging.basicConfig(level=logging.INFO)
+reset = Fore.RESET
+red = Fore.RED
+blue = Fore.BLUE
+lred = Fore.LIGHTRED_EX
+lblue = Fore.LIGHTBLUE_EX
+green = Fore.GREEN
+yellow = Fore.YELLOW
+
+class ToDoList:
     #class static variables here most likely will have them
+    # variables for colour printing
     def __init__(self
                  ):
         pass
@@ -23,12 +46,17 @@ class ToDOList:
 
     @staticmethod
     def main() -> None:
-        #public static void main ahh method -_-
-        pass
+        try:
+            banner = UserInterface().banner
+            gradient_banner = fade.fire(banner)
+            print(f"{green}{gradient_banner}\n{yellow}{UserInterface().task_menu}{reset}")
+        except:
+            pass
 
 #only exec if opened as script and not module (why would it be opened as a module idfk)
 if __name__ == "__main__":
-    ToDOList()
-    ToDOList.main()
+    ToDoList()
+    ToDoList.main()
 
-print('Hello world!')
+
+input()
