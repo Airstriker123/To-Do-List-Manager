@@ -57,6 +57,4 @@ class ToDoList:
 if __name__ == "__main__":
     ToDoList()
     ToDoList.main()
-
-
 input()
