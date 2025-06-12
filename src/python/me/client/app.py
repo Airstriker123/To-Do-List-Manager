@@ -64,6 +64,7 @@ class ToDoList:
              elif choice == "4":
                  pass
              else:
+                 print(f'{red}"{choice}" is not in options!{reset}')
                  print(f"{red}[!] Invalid choice!{reset}")
                  time.sleep(1)
 
@@ -72,8 +73,6 @@ class ToDoList:
              print(f"{red}Something went wrong.{reset}")
              print(f"{red}in: app.py (main method)")
              print(f"{blue}{e}{reset}")
-
-
 
 #only exec if opened as script and not module (why would it be opened as a module idfk)
 if __name__ == "__main__":
