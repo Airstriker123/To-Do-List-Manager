@@ -4,8 +4,8 @@ import os
 try:
    # from backend.main import *
     from colorama import Fore, Back, Style
-    from ui.ui import UserInterface
-    from src.python.me.backend.commands import *
+    from client.ui.ui import UserInterface
+    from backend.commands import *
     import fade
     #list modules here
 except:
@@ -20,7 +20,7 @@ except:
         print(f"Installing module: {module}")
         os.system(f"pip install {module}")
         import fade
-    from colorama import Fore, Back, Style
+    from src.python.me.backend.commands import *
 
 class ToDoList:
     #class static variables here most likely will have them
