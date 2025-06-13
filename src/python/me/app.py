@@ -67,7 +67,7 @@ class ToDoList:
          except Exception as e:
              # catch any error
              print(f"{red}Something went wrong.{reset}")
-             print(f"{red}in: app.py (main method)")
+    
              print(f"{blue}{e}{reset}")
 
 #only exec if opened as script and not module (why would it be opened as a module idfk)
