@@ -27,11 +27,12 @@ class Commands:
     def add_task(self):
         """Method to add a new task use this to modify backend"""
         todo = input("What todo would you like to add: ")
-        self.backed.add_todo(todo)
+        self.backend.add_todo(todo)
 
     def del_task(self):
         """Method to remove a task"""
         todo_id = input("What todo ID do you want to remove: ")
+        self.backend.remove_todo(todo)
 
     def check_task(self, todo_id):
         """Method to check off a task"""
