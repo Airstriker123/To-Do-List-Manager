@@ -48,12 +48,12 @@ class ToDoBackend:
         print(todo)
         print(self.todos)
 
-    def remove_todo(self, todo):
+    def remove_todo(self, todo_id):
         """
         Removes todo from list, if no todo found then nothing happens
         """
 
-        self.todos.remove(todo)
+        self.todos.remove(int(todo_id))
 
     def find_todo(self, todo_id):
         """
