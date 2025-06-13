@@ -2,7 +2,7 @@ import time
 import sys
 import os
 from colorama import Fore, Back, Style
-import me.backend.main as backend
+from backend.main import ToDoBackend
 
 reset = Fore.RESET
 red = Fore.RED
@@ -18,7 +18,7 @@ orange = '\033[38;5;208m'
 class Commands:
     """Class stores option logic"""
     def __init__(self):
-        self.backend = backend.ToDoBackend()
+        self.backend = ToDoBackend()
         self.backend.deserialise()
 
     def __str__(self):

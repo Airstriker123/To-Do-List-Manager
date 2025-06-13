@@ -20,7 +20,7 @@ except:
         print(f"Installing module: {module}")
         os.system(f"pip install {module}")
         import fade
-    from src.python.me.backend.commands import *
+    from backend.commands import *
 
 class ToDoList:
     #class static variables here most likely will have them
