@@ -26,12 +26,12 @@ except:
 
 
 class ToDoList:
-    #class static variables here most likely will have them
-    # variables for colour printing
+    #class static variables (here most likely will have them)
     def __init__(self
                  ):
+        #construct app here             
         pass
-    #construct app here
+    
 
     def __str__(self):
         return ""
@@ -51,7 +51,7 @@ class ToDoList:
             if os_name == "penguin_operating_system":
                 os.system("clear")
         except Exception as e:
-            print("what os is bro using??????")
+            print("Failed to get os....")
 
     @staticmethod
     def main() -> None:
