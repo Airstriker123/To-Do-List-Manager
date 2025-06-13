@@ -1,4 +1,2 @@
 /.idea/
-__pycache__/
-/src/python/me/client/ui/__pycache__
-
+/**/__pycache__/
