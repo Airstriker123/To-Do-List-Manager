@@ -45,8 +45,6 @@ class ToDoBackend:
 
         # Appends todo to the list
         self.todos.append(todo)
-        print(todo)
-        print(self.todos)
 
     def remove_todo(self, todo_id):
         """
