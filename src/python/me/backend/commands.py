@@ -2,6 +2,7 @@ import time
 import sys
 import os
 from colorama import Fore, Back, Style
+import me.backend.main as backend
 
 reset = Fore.RESET
 red = Fore.RED
@@ -17,29 +18,37 @@ orange = '\033[38;5;208m'
 class Commands:
     """Class stores option logic"""
     def __init__(self):
-            pass
+        self.backend = backend.ToDoBackend()
+        self.backend.deserialise()
 
     def __str__(self):
         return "invalid use of class!"
 
     def option_1(self):
         """Method to add a new task use this to modify backend"""
-        pass
+        todo = input("What todo would you like to add: ")
 
-    def option_2(self):
+    def del_task(self):
         """Method to remove a task"""
-        pass
+        todo_id = input("What todo ID do you want to remove: ")
 
-    def option_3(self):
+    def check_task(self, todo_id):
         """Method to check off a task"""
+        self.del_task()
         pass
 
     def option_4(self):
-        """Method to list tasks (print)"""
-        pass
+        """Prints all tasks, with ids"""
+
+        i = 0
+        for task in self.backend.todos:
+            print(f"[{i}] {task}")
+
+            i += 1
 
     @staticmethod
-    def option_5():
+    def exit():
         """Method to exit app"""
         print(f"{lc}exiting app!{reset}")
+        self.backend.serialise()
         sys.exit()
