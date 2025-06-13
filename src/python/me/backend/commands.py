@@ -39,13 +39,10 @@ class Commands:
 
     def option_4(self):
         """Prints all tasks, with ids"""
-
         i = 0
         for task in self.backend.todos:
             print(f"[{i}] {task}")
-
             i += 1
-
     
     def exit(self):
         """Method to exit app"""
