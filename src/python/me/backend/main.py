@@ -19,7 +19,7 @@ class ToDoBackend:
         """
 
         # If file doesn't exsist don't bother trying to read it
-        if not os.file.exists(self.db_name):
+        if not os.path.exists(self.db_name):
             # create the file and return without trying to read todos
             with open(self.db_name, "w+"): pass
             return
