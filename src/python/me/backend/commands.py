@@ -46,8 +46,8 @@ class Commands:
 
             i += 1
 
-    @staticmethod
-    def exit():
+    
+    def exit(self):
         """Method to exit app"""
         print(f"{lc}exiting app!{reset}")
         self.backend.serialise()
