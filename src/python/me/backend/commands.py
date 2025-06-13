@@ -27,6 +27,8 @@ class Commands:
     def option_1(self):
         """Method to add a new task use this to modify backend"""
         todo = input("What todo would you like to add: ")
+        def add_todo(self, todo):
+        todo.add(todo)
 
     def del_task(self):
         """Method to remove a task"""
