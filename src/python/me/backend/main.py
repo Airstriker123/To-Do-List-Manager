@@ -16,7 +16,7 @@ class ToDoBackend:
         """
 
         # Opens a file in read mode, splits the fil by newlines and appends them as todo's
-        with open(self.db_name, 'r') as db:
+        with open(self.db_name, 'r+') as db:
             self.todos = [line.strip() for line in db.readlines()]
 
     def serialise(self):
