@@ -49,16 +49,16 @@ class ToDoList:
 """)
              #manage input from choice and call function based on selection.
              if choice == "1":
-                 pass
+                 Commands().add_task()
              elif choice == "2":
-                 pass
+                 Commands().del_task()
              elif choice == "3":
-                 pass
+                 Commands().check_task()
              elif choice == "4":
-                 pass
+                 Commands().print_task()
              elif choice == "5":
                  #exit app
-                 Commands.option_5()
+                 Commands().exit()
              else:
                  print(f'{red}"{choice}" is not in options!{reset}')
                  print(f"{red}[!] Invalid choice!{reset}")

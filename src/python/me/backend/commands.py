@@ -35,12 +35,12 @@ class Commands:
         todo = self.backend.find_todo(todo_id)
         self.backend.remove_todo(todo)
 
-    def check_task(self, todo_id):
+    def check_task(self):
         """Method to check off a task"""
         self.del_task()
         pass
 
-    def option_4(self):
+    def print_task(self):
         """Prints all tasks, with ids"""
         i = 0
         for task in self.backend.todos:
