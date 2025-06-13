@@ -17,9 +17,10 @@ orange = '\033[38;5;208m'
 
 class Commands:
     """Class stores option logic"""
+    backend = ToDoBackend()
+    backend.deserialise()
     def __init__(self):
-        self.backend = ToDoBackend()
-        self.backend.deserialise()
+        pass
 
     def __str__(self):
         return "invalid use of class!"
