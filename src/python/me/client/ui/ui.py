@@ -17,7 +17,8 @@ f'''
 [1] Add a task
 [2] Remove a task
 [3] Check off a task
-[4] exit 
+[4] print list of tasks
+[5] exit app
 ================================================================================================================               
 \n"""
 #list tasks from input
