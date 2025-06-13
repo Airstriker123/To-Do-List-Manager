@@ -1,5 +1,8 @@
 # Back end for ToDo app
 # SHOULD NOT UNDER ANY CIRCUMSTANCES BE CREATED BY MIDDLE OR FRONT END
+
+import os
+
 class ToDoBackend:
     def __init__(self):
         """
@@ -15,8 +18,14 @@ class ToDoBackend:
         Deserialises text data into python data
         """
 
+        # If file doesn't exsist don't bother trying to read it
+        if not os.file.exists(self.db_name):
+            # create the file and return without trying to read todos
+            with open(self.db_name, "w+"): pass
+            return
+
         # Opens a file in read mode, splits the fil by newlines and appends them as todo's
-        with open(self.db_name, 'r+') as db:
+        with open(self.db_name, 'r') as db:
             self.todos = [line.strip() for line in db.readlines()]
 
     def serialise(self):
@@ -25,7 +34,7 @@ class ToDoBackend:
         """
 
         # Opens file in write mode and serialises all todos
-        with open(self.db_name, 'w') as db:
+        with open(self.db_name, 'w+') as db:
             for todo in self.todos:
                 db.write(f"{todo}\n")
 
