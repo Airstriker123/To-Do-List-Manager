@@ -1,5 +1,4 @@
 """Python file to convert project into a exe"""
-
 import os
 import sys
 try:

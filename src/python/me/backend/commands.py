@@ -11,9 +11,11 @@ lblue = Fore.LIGHTBLUE_EX
 lc = Fore.LIGHTCYAN_EX
 green = Fore.GREEN
 yellow = Fore.YELLOW
+#ascii colour code for orange (fore does not have a default colour code for orange)
 orange = '\033[38;5;208m'
 
 class Commands:
+    """Class stores option logic"""
     def __init__(self):
             pass
 
@@ -32,8 +34,12 @@ class Commands:
         """Method to check off a task"""
         pass
 
+    def option_4(self):
+        """Method to list tasks (print)"""
+        pass
+
     @staticmethod
-    def option_4():
+    def option_5():
         """Method to exit app"""
         print(f"{lc}exiting app!{reset}")
         sys.exit()

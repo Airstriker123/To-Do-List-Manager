@@ -55,7 +55,10 @@ class ToDoList:
              elif choice == "3":
                  pass
              elif choice == "4":
-                 Commands.option_4()
+                 pass
+             elif choice == "5":
+                 #exit app
+                 Commands.option_5()
              else:
                  print(f'{red}"{choice}" is not in options!{reset}')
                  print(f"{red}[!] Invalid choice!{reset}")
