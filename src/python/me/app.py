@@ -1,5 +1,6 @@
 #modules preinstalled up here
 import os
+import sys
 
 try:
    # from backend.main import *
@@ -19,7 +20,7 @@ except:
     for module in dependencies:
         print(f"Installing module: {module}")
         os.system(f"pip install {module}")
-        import fade
+    import fade
     from backend.commands import *
 
 
@@ -34,12 +35,30 @@ class ToDoList:
 
     def __str__(self):
         return ""
+    @staticmethod
+    def Clear():
+        """Function to clear terminal for both linux and windows every loop in main method"""
+        try:
+            if sys.platform.startswith("win"):
+                os_name = "Windows"
+            elif sys.platform.startswith("linux"):
+                os_name = "penguin_operating_system"
+            else:
+                os_name = "Unknown"
+
+            if os_name == "Windows":
+                os.system("cls")
+            if os_name == "penguin_operating_system":
+                os.system("clear")
+        except Exception as e:
+            print("what os is bro using??????")
 
     @staticmethod
     def main() -> None:
      while True:
          try:
              # app code to be called from classes/functions
+             ToDoList().Clear()
              banner = UserInterface().banner
              gradient_banner = fade.fire(banner)
              #print banner and menu
@@ -52,12 +71,16 @@ class ToDoList:
              #manage input from choice and call function based on selection.
              if choice == "1":
                  Commands().add_task()
+                 input(f"{yellow}[!]press enter to continue[!]:>{reset}")
              elif choice == "2":
                  Commands().del_task()
+                 input(f"{yellow}[!]press enter to continue[!]:>{reset}")
              elif choice == "3":
                  Commands().check_task()
+                 input(f"{yellow}[!]press enter to continue[!]:>{reset}")
              elif choice == "4":
                  Commands().print_task()
+                 input(f"{yellow}[!]press enter to continue[!]:>{reset}")
              elif choice == "5":
                  #exit app
                  Commands().exit()
@@ -71,6 +94,7 @@ class ToDoList:
              print(f"{red}Something went wrong.{reset}")
              print(f"{blue}{e}{reset}")
              input(f"{blue}Press enter to continue...{reset}")
+             ToDoList().Clear()
 
 #only exec if opened as script and not module (why would it be opened as a module idfk)
 if __name__ == "__main__":
