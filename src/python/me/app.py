@@ -15,7 +15,7 @@ except:
         "colorama>=0.4.6",
         "fade",
     ]
-    #install custom py modules using pip
+    #install custom py modules using pip if not installed
     for module in dependencies:
         print(f"Installing module: {module}")
         os.system(f"pip install {module}")
@@ -40,11 +40,14 @@ class ToDoList:
              # app code to be called from classes/functions
              banner = UserInterface().banner
              gradient_banner = fade.fire(banner)
+             #print banner and menu
              print(f"{green}{gradient_banner}\n{yellow}{UserInterface().task_menu}{reset}")
+             #print choice
              choice = input\
 (f"""
 {orange}[Enter your choice]:->{reset}\
 """)
+             #manage input from choice and call function based on selection.
              if choice == "1":
                  pass
              elif choice == "2":
