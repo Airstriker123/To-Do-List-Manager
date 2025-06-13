@@ -53,7 +53,7 @@ class ToDoBackend:
         Removes todo from list, if no todo found then nothing happens
         """
 
-        self.todos.remove(int(todo_id))
+        self.todos.remove(todo_id)
 
     def find_todo(self, todo_id):
         """
