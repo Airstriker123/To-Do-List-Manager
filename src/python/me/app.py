@@ -3,7 +3,6 @@ import os
 import sys
 
 try:
-   # from backend.main import *
     from colorama import Fore, Back, Style
     from client.ui.ui import UserInterface
     from backend.commands import *
@@ -55,6 +54,7 @@ class ToDoList:
 
     @staticmethod
     def main() -> None:
+        #Main method to be called with all core logic in here
      while True:
          try:
              # app code to be called from classes/functions
