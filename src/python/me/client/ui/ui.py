@@ -1,5 +1,5 @@
 class UserInterface:
-    """Class to store user interface variables which can be used to print some shit"""
+    """Class to store user interface variables which can be used to print ui"""
     def __init__(self):
         self.banner = \
 f'''                                                                                                                  
