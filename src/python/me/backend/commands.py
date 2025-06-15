@@ -32,8 +32,15 @@ class Commands:
 
     def del_task(self):
         """Method to remove a task"""
-        todo_id = int(input("What todo ID do you want to remove: "))
-        todo = self.backend.find_todo(todo_id)
+        todo_id = ""
+        while True:
+            todo_id = input("What todo ID do you want to remove (Type: help to print tasks): ")
+            if todo_id.lower() == "help":
+               self.print_task()
+            else:
+               break
+
+        todo = self.backend.find_todo(int(todo_id))
         self.backend.remove_todo(todo)
 
     def check_task(self):
