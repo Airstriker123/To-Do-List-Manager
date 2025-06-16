@@ -96,7 +96,7 @@ class ToDoList:
              input(f"{blue}Press enter to continue...{reset}")
              ToDoList().Clear()
 
-#only exec if opened as script and not module (why would it be opened as a module idfk)
+#only exec if opened as script and not module (why would it be opened as a module idk)
 if __name__ == "__main__":
     ToDoList()
     ToDoList.main()
