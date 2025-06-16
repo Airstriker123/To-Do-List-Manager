@@ -11,7 +11,7 @@ try:
 except:
     #include their install command here e.g os.system('pip install <module>')
     dependencies = [
-        #list your module in string 🥷 -_-
+        #list your module in string  -_-
         "colorama>=0.4.6",
         "fade",
     ]
