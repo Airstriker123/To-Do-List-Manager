@@ -1,7 +1,6 @@
 #modules preinstalled up here
 import os
 import sys
-
 try:
     from colorama import Fore, Back, Style
     from client.ui.ui import UserInterface
@@ -21,7 +20,6 @@ except:
         os.system(f"pip install {module}")
     import fade
     from backend.commands import *
-
 
 
 class ToDoList:
@@ -44,7 +42,6 @@ class ToDoList:
                 os_name = "penguin_operating_system"
             else:
                 os_name = "Unknown"
-
             if os_name == "Windows":
                 os.system("cls")
             if os_name == "penguin_operating_system":

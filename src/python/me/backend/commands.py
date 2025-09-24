@@ -2,7 +2,7 @@ import time
 import sys
 import os
 from colorama import Fore, Back, Style
-from backend.main import ToDoBackend
+from main import ToDoBackend
 
 reset = Fore.RESET
 red = Fore.RED
